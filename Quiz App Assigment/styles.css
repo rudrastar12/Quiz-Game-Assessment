@@ -97,3 +97,13 @@ list-group-item {
 .button-container button.btn-primary:hover {
   background-color: #0056b3;
 }
+
+.button-container button.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+.button-container button.btn-secondary:hover {
+  background-color: #495057;
+}
