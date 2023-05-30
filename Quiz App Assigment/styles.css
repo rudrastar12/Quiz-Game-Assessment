@@ -65,3 +65,12 @@ list-group-item {
 .list-group-item:hover {
   background-color: #f9f9f9;
 }
+
+/* Styles for correct and incorrect answers */
+.list-group-item.correct-answer {
+  background-color: #d4edda;
+}
+
+.list-group-item.wrong-answer {
+  background-color: #f8d7da;
+}
