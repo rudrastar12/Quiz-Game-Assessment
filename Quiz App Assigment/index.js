@@ -106,26 +106,33 @@ window.addEventListener('DOMContentLoaded', () => {
 };
 
 
-  // Calculate the score
+// Function to calculate the quiz score
   const calculateScore = () => {
+    console.log('Calculating score');
     let score = 0;
     quizArray.map((quizItem, index) => {
       for (let i = 0; i < 4; i++) {
-        //highlight the li if it is the correct answer
         let li = `li_${index}_${i}`;
         let r = `radio_${index}_${i}`;
-        liElement = document.querySelector('#' + li);
-        radioElement = document.querySelector('#' + r);
-
+        let liElement = document.querySelector('#' + li);
+        let radioElement = document.querySelector('#' + r);
+  
         if (quizItem.a == i) {
-          //change background color of li element here
+          liElement.classList.add('correct-answer');
         }
-
+  
         if (radioElement.checked) {
-          // code for task 1 goes here
+          console.log('Answer checked', li);
+          if (quizItem.a == i) {
+            score++;
+          } else {
+            liElement.classList.add('wrong-answer');
+          }
         }
       }
     });
+    scoreElement.innerText = scoreElement.innerText = 'You scored ' + score + '/' + quizArray.length;
+    console.log('Score:', score);
   };
 
   // call the displayQuiz function
