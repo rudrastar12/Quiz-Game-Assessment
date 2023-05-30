@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // Selecting necessary elements from the HTML document
+// Selecting necessary elements from the HTML document
       const start = document.querySelector('#start');
       const quizBlock = document.querySelector('#quizBlock');
       const submitButton = document.querySelector('#btnSubmit');
@@ -10,20 +10,21 @@ window.addEventListener('DOMContentLoaded', () => {
       let timer;
       let timeRemaining = 60; // 60 seconds
     
-  // Event listener for the "Start" button
+  
+// Event listener for the "Start" button
       start.addEventListener('click', function (e) {
-  // Display the quiz block and hide the start button
+// Display the quiz block and hide the start button
         quizBlock.style.display = 'block';
         start.style.display = 'none';
-  // Start the countdown timer
+// Start the countdown timer
         timer = setInterval(countdown, 1000);
       });
   
   
-  // Event listener for the "Submit" button
+// Event listener for the "Submit" button
        submitButton.addEventListener('click', function(e) {
         console.log('Submit button clicked');
-  // check if the quiz has been answered
+// check if the quiz has been answered
         let isAnswered = quizArray.every((quizItem, index) => {
           return Array.from(document.getElementsByName(`radio${index}`)).some(radio => radio.checked);
         });
@@ -37,14 +38,14 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   
   
-  // Event listener for the "Reset" button
+// Event listener for the "Reset" button
       resetButton.addEventListener('click', function(e) {
-  // Reload the page to reset the quiz
+// Reload the page to reset the quiz
            window.location.reload();
       });
   
   
-  // Countdown function called every second by the timer
+// Countdown function called every second by the timer
       const countdown = () => {
         timeRemaining--;
         if (timeRemaining <= 0) {
@@ -56,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
   
   
-  // Array containing the quiz questions, options, and correct answers
+// Array containing the quiz questions, options, and correct answers
   const quizArray = [
     {
       q: '1. Which is the third planet from the sun?',
@@ -85,7 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   ];
   
-  // Function to display the quiz questions and options
+  
+// Function to display the quiz questions and options
       const displayQuiz = () => {
           const quizWrap = document.querySelector('#quizWrap');
         let quizDisplay = '';
@@ -104,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
       };
   
   
-  // Function to calculate the quiz score
+// Function to calculate the quiz score
       const calculateScore = () => {
         console.log('Calculating score');
         let score = 0;
@@ -132,7 +134,8 @@ window.addEventListener('DOMContentLoaded', () => {
         scoreElement.innerText = scoreElement.innerText = 'You scored ' + score + '/' + quizArray.length;
         console.log('Score:', score);
       };
-      
-  // Call the displayQuiz function to render the quiz on page load   
+
+
+      // Call the displayQuiz function to render the quiz on page load   
       displayQuiz();
     });
