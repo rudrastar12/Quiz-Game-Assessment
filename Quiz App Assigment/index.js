@@ -36,14 +36,26 @@ window.addEventListener('DOMContentLoaded', () => {
           alert('Please answer all the questions before submitting.');
         }
       });  
+
       
-      
-      // Event listener for the "Reset" button
+// Event listener for the "Reset" button
       resetButton.addEventListener('click', function(e) {
         // Reload the page to reset the quiz
                  window.location.reload();
             });
 
+
+// Countdown function called every second by the timer
+      const countdown = () => {
+        timeRemaining--;
+        if (timeRemaining <= 0) {
+          clearInterval(timer);
+          calculateScore();
+        } else {
+          timeElement.innerText = timeRemaining;
+        }
+      }
+         
   const quizArray = [
     {
       q: 'Which is the third planet from the sun?',
