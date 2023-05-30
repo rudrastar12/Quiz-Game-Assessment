@@ -6,7 +6,10 @@ window.addEventListener('DOMContentLoaded', () => {
       const resetButton = document.querySelector('#btnReset');
       const timeElement = document.querySelector('#time');
       const scoreElement = document.querySelector('#score');
- 
+
+      let timer;
+      let timeRemaining = 60; // 60 seconds
+      
   const quizArray = [
     {
       q: 'Which is the third planet from the sun?',
