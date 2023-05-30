@@ -135,6 +135,7 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('Score:', score);
   };
 
-  // call the displayQuiz function
-  displayQuiz();
+  
+// Call the displayQuiz function to render the quiz on page load   
+displayQuiz();
 });
