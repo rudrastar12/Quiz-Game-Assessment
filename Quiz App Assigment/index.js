@@ -9,7 +9,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
       let timer;
       let timeRemaining = 60; // 60 seconds
-      
+
+       // Event listener for the "Start" button
+       start.addEventListener('click', function (e) {
+        // Display the quiz block and hide the start button
+              quizBlock.style.display = 'block';
+              start.style.display = 'none';
+        // Start the countdown timer
+              timer = setInterval(countdown, 1000);
+            });
+
   const quizArray = [
     {
       q: 'Which is the third planet from the sun?',
