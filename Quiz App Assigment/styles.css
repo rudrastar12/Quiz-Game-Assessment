@@ -74,3 +74,9 @@ list-group-item {
 .list-group-item.wrong-answer {
   background-color: #f8d7da;
 }
+
+/* Button styles */
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
