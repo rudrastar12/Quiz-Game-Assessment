@@ -34,3 +34,14 @@ h1 {
   padding-top: 50px;
   padding-left: 70px;
 }
+
+/* Quiz Block styles */
+#quizBlock {
+  /* Initially hide the quiz block */
+  display: none;
+  margin-top: 20px;
+  color: black;
+  /* Background image for the quiz block */
+  background-image: url('/quizquestionbackground.jpg');
+  background-size:100px 100px;
+}
