@@ -8,7 +8,7 @@ body {
   background-image: url('/quiz\ homepage\ background.jpeg');
 }
 
-container {
+.container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -19,3 +19,18 @@ h1 {
   color: white;
 }
  
+/* Card styles */
+.card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.card-body {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: 50px;
+  padding-left: 70px;
+}
