@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // Selecting necessary elements from the HTML document
+// Selecting necessary elements from the HTML document
       const start = document.querySelector('#start');
       const quizBlock = document.querySelector('#quizBlock');
       const submitButton = document.querySelector('#btnSubmit');
@@ -7,17 +7,35 @@ window.addEventListener('DOMContentLoaded', () => {
       const timeElement = document.querySelector('#time');
       const scoreElement = document.querySelector('#score');
 
+      
       let timer;
       let timeRemaining = 60; // 60 seconds
 
-       // Event listener for the "Start" button
+// Event listener for the "Start" button
        start.addEventListener('click', function (e) {
-        // Display the quiz block and hide the start button
+// Display the quiz block and hide the start button
               quizBlock.style.display = 'block';
               start.style.display = 'none';
-        // Start the countdown timer
+// Start the countdown timer
               timer = setInterval(countdown, 1000);
             });
+
+
+// Event listener for the "Submit" button
+      submitButton.addEventListener('click', function(e) {
+        console.log('Submit button clicked');
+// check if the quiz has been answered
+        let isAnswered = quizArray.every((quizItem, index) => {
+          return Array.from(document.getElementsByName(`radio${index}`)).some(radio => radio.checked);
+        });
+      
+        if (isAnswered) {
+          clearInterval(timer);
+          calculateScore();
+        } else {
+          alert('Please answer all the questions before submitting.');
+        }
+      });      
 
   const quizArray = [
     {
