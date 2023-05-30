@@ -107,3 +107,11 @@ list-group-item {
 .button-container button.btn-secondary:hover {
   background-color: #495057;
 }
+
+/* Timer styles */
+#time {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
