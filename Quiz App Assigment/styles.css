@@ -45,3 +45,10 @@ h1 {
   background-image: url('/quizquestionbackground.jpg');
   background-size:100px 100px;
 }
+
+/* List styles for quiz questions and options */
+ul.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
