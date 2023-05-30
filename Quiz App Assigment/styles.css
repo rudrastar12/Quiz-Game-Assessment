@@ -52,3 +52,11 @@ ul.list-group {
   padding: 0;
   margin-bottom: 20px;
 }
+
+list-group-item {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
