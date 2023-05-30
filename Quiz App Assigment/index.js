@@ -56,21 +56,33 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
          
+
+// Array containing the quiz questions, options, and correct answers
   const quizArray = [
     {
-      q: 'Which is the third planet from the sun?',
+      q: '1. Which is the third planet from the sun?',
       o: ['Saturn', 'Earth', 'Pluto', 'Mars'],
-      a: 1, // array index 1 - so Earth is the correct answer here
+      a: 1,
     },
     {
-      q: 'Which is the largest ocean on Earth?',
+      q: '2. Which is the largest ocean on Earth?',
       o: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'],
       a: 3,
     },
     {
-      q: 'What is the capital of Australia',
+      q: '3. What is the capital of Australia?',
       o: ['Sydney', 'Canberra', 'Melbourne', 'Perth'],
       a: 1,
+    },
+    {
+      q: '4. What is the square root of 81?',
+      o: ['7', '8', '9', '10'],
+      a: 2,
+    },
+    {
+      q: '5. What is the chemical symbol for Oxygen?',
+      o: ['O', 'Ox', 'O2', 'O3'],
+      a: 0,
     },
   ];
 
