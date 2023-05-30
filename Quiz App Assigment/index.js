@@ -35,7 +35,14 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
           alert('Please answer all the questions before submitting.');
         }
-      });      
+      });  
+      
+      
+      // Event listener for the "Reset" button
+      resetButton.addEventListener('click', function(e) {
+        // Reload the page to reset the quiz
+                 window.location.reload();
+            });
 
   const quizArray = [
     {
