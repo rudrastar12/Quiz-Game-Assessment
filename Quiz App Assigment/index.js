@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const start = document.querySelector('#start');
-  start.addEventListener('click', function (e) {
-    document.querySelector('#quizBlock').style.display = 'block';
-    start.style.display = 'none';
-  });
-  // quizArray QUESTIONS & ANSWERS
-  // q = QUESTION, o = OPTIONS, a = CORRECT ANSWER
-  // Basic ideas from https://code-boxx.com/simple-javascript-quiz/
+  // Selecting necessary elements from the HTML document
+      const start = document.querySelector('#start');
+      const quizBlock = document.querySelector('#quizBlock');
+      const submitButton = document.querySelector('#btnSubmit');
+      const resetButton = document.querySelector('#btnReset');
+      const timeElement = document.querySelector('#time');
+      const scoreElement = document.querySelector('#score');
+ 
   const quizArray = [
     {
       q: 'Which is the third planet from the sun?',
