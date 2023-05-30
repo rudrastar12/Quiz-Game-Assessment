@@ -53,7 +53,7 @@ ul.list-group {
   margin-bottom: 20px;
 }
 
-list-group-item {
+.list-group-item {
   padding: 10px 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -123,7 +123,7 @@ list-group-item {
   margin-bottom: 20px;
 }
 
-* Margin for spacing between elements */
+/* Margin for spacing between elements */
 div.spacer {
   margin-bottom: 10px;
 }
