@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   /* Background image for the entire page */
-  background-image: url('/quiz\ homepage\ background.jpeg');
+  background-image: url('quizhomepagebackground.jpeg');
 }
 
 .container {
@@ -42,7 +42,7 @@ h1 {
   margin-top: 20px;
   color: black;
   /* Background image for the quiz block */
-  background-image: url('/quizquestionbackground.jpg');
+  background-image: url('quizquestionbackground.jpg');
   background-size:100px 100px;
 }
 
